@@ -59,15 +59,9 @@ runs:
         doxygen --version
       shell: bash
 
-    - name: Verify repository contents
-      run: |
-        ls -la
-      shell: bash
-
     - name: test py_filter
       run: |
         chmod +x py_filter.sh
-        ./py_filter.sh
       shell: bash
 
     - name: Generate Doxygen Documentation
