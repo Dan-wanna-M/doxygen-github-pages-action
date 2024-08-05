@@ -66,6 +66,7 @@ runs:
 
     - name: test py_filter
       run: |
+        chmod +x py_filter.sh
         ./py_filter.sh
       shell: bash
 
