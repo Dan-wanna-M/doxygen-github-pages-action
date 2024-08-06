@@ -24,6 +24,9 @@ inputs:
   target_folder:
     description: 'Directory on the deployment branch for pushing the build files'
     required: false
+  pre_build:
+    description: 'Command to run before building the documentation'
+    required: false
 
 runs:
   using: "composite"
@@ -59,9 +62,9 @@ runs:
         doxygen --version
       shell: bash
 
-    - name: test py_filter
-      run: |
-        chmod +x py_filter.sh
+    - name: Run pre-build command
+      if: ${{ inputs.pre_build != null }}
+      run: ${{ inputs.pre_build }}
       shell: bash
 
     - name: Generate Doxygen Documentation
