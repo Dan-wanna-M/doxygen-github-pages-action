@@ -36,6 +36,7 @@ runs:
       with:
         submodules: "true"
         fetch-tags: "true"
+        
 
     - name: Install dependencies
       run: |
