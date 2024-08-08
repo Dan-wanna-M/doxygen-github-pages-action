@@ -34,8 +34,9 @@ runs:
     - name: Checkout repository
       uses: actions/checkout@v4
       with:
-        submodules: "true"
-        fetch-tags: "true"
+        submodules: true
+        fetch-tags: true
+        fetch-depth: 0
         
 
     - name: Install dependencies
