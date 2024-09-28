@@ -79,7 +79,7 @@ runs:
       shell: bash
 
     - name: Deploy to GitHub Pages
-      uses: JamesIves/github-pages-deploy-action@v4
+      uses: JamesIves/github-pages-deploy-action@v4.6.4 # https://github.com/detekt/detekt/pull/7685
       with:
         token: ${{ inputs.github_token }}
         branch: ${{ inputs.branch }}
